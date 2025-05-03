@@ -125,3 +125,4 @@ latex
 .vscode
 build
 sdkconfig.old
+shared_components
