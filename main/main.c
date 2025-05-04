@@ -25,7 +25,15 @@ void app_main(void)
 
     // Initialize Core Components
     ESP_LOGI(TAG, "Initializing I2C Manager...");
-    ret = i2c_manager_init();
+
+    // Create and configure the I2C manager configuration
+    i2c_manager_config_t i2c_config = {
+        .scl_pin = 22,        // Example: SCL on GPIO22
+        .sda_pin = 21,        // Example: SDA on GPIO21
+        .clock_speed = 400000 // Example: 400 KHz
+    };
+
+    ret = i2c_manager_init(&i2c_config);
     if (ret != ESP_OK)
     {
         ESP_LOGE(TAG, "Failed to initialize I2C Manager!");
