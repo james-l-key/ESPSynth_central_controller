@@ -1,0 +1,3 @@
+[submodule "components/module_i2c_proto"]
+	path = components/module_i2c_proto
+	url = https://github.com/james-l-key/EspSynth_module_i2c_proto.git
