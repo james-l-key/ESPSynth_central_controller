@@ -217,7 +217,7 @@ esp_err_t i2c_manager_send_command(uint8_t mux_channel, uint8_t module_address, 
     uint8_t *tx_buffer = NULL;
     size_t total_len = 1 + data_len; // command_id + data
     if (total_len > 0)
-    {   // Allocate only if there's something to send
+    { // Allocate only if there's something to send
         tx_buffer = (uint8_t *)malloc(total_len);
         if (tx_buffer == NULL)
         {
